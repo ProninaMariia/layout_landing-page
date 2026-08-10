@@ -32,6 +32,8 @@ if (form) {
     const btn = form.querySelector('.contact__submit');
     const original = btn.textContent;
 
+    form.reset();
+
     btn.textContent = 'Message sent ✓';
     btn.disabled = true;
     btn.style.backgroundColor = '#2a7a4b';
@@ -40,7 +42,6 @@ if (form) {
       btn.textContent = original;
       btn.disabled = false;
       btn.style.backgroundColor = '';
-      form.reset();
     }, 3000);
   });
 }

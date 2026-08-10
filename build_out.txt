@@ -1,0 +1,26 @@
+
+> layout_landing-page@1.0.0 build
+> mate-scripts build
+
+[33m[1m(!) "base" option should start with a slash.[22m[39m
+[36mvite v6.3.6 [32mbuilding for production...[36m[39m
+<script src="src/scripts/main.js"> in "/index.html" can't be bundled without type="module" attribute
+transforming...
+[32m✓[39m 2 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32massets/Logo-S9XxFak5.png       [39m[1m[2m    2.02 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-9-fnbJ7iXZ.png      [39m[1m[2m    8.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-5-Cu7BBZCP.png      [39m[1m[2m   16.70 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-8-pygOalHH.png      [39m[1m[2m   18.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-7-DzgO09K3.png      [39m[1m[2m   19.98 kB[22m[1m[22m
+[2mdist/[22m[32mindex.html                     [39m[1m[2m   21.80 kB[22m[1m[22m[2m │ gzip: 4.87 kB[22m
+[2mdist/[22m[32massets/img-6-BFbo7OSd.png      [39m[1m[2m   21.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-4-BICS52Dt.png      [39m[1m[2m   23.98 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-3-C1pzppjk.png      [39m[1m[2m   90.65 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-2-BftAurA9.png      [39m[1m[2m  131.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/img-1-DfKkByIO.png      [39m[1m[2m  316.10 kB[22m[1m[22m
+[2mdist/[22m[32massets/Image-C3HaCULf.png      [39m[1m[2m  554.63 kB[22m[1m[22m
+[2mdist/[22m[32massets/header-bg-CX9KnSZ4.png  [39m[1m[2m3,327.94 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-MQDR1-8i.css      [39m[1m[2m    9.55 kB[22m[1m[22m[2m │ gzip: 2.51 kB[22m
+[32m✓ built in 4.65s[39m
