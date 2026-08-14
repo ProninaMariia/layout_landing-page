@@ -226,6 +226,12 @@
           <div class="categories__intro">
             <p class="categories__subtitle">Sound. Vision.</p>
             <p class="categories__description">It's your pick.</p>
+            <a
+              href="#"
+              class="button categories__view-all"
+            >
+              View all
+            </a>
           </div>
 
           <div class="categories__grid">
@@ -386,10 +392,7 @@
               </div>
             </div>
 
-            <form
-              class="contact__form animate-on-scroll"
-              novalidate
-            >
+            <form class="contact__form animate-on-scroll">
               <div class="form-field">
                 <input
                   type="text"
@@ -398,6 +401,7 @@
                   class="form-field__input"
                   placeholder="Your name"
                   required
+                  aria-label="Your name"
                 />
               </div>
 
@@ -409,6 +413,20 @@
                   class="form-field__input"
                   placeholder="Email (e.g. john@example.com)"
                   required
+                  aria-label="Email"
+                />
+              </div>
+
+              <div class="form-field">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-field__input"
+                  placeholder="Phone (e.g. +1 800 400 1234)"
+                  pattern="^\+?[0-9\s\-()]{7,}$"
+                  required
+                  aria-label="Phone"
                 />
               </div>
 
@@ -419,6 +437,7 @@
                   class="form-field__input form-field__input--textarea"
                   placeholder="Your message..."
                   required
+                  aria-label="Message"
                 ></textarea>
               </div>
 

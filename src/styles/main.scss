@@ -109,17 +109,61 @@ body {
   height: 32px;
 }
 
+/* show phone number on hover */
+.header__icons .icon--phone {
+  position: relative;
+}
+
+.header__icons .icon--phone::after {
+  content: '+1 800 400 1234';
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  background: rgba(27, 33, 41, 0.95);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+  z-index: 10;
+}
+
+.header__icons .icon--phone:hover::after,
+.page.menu-open .header__icons .icon--phone::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* change menu icon to close when menu is open */
+.header__icons .icon--menu {
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+}
+
+.page.menu-open .icon--menu {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b2129' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+}
+
 /* ============================================================
    MENU
    ============================================================ */
 .menu {
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
+  width: 100vw;
+  max-width: none;
   height: 100vh;
-  width: min(360px, 85%);
   z-index: 100;
-  padding: 24px 24px 40px;
+  padding: 32px;
   background-color: var(--color-white);
   color: var(--color-text);
   display: flex;
@@ -131,9 +175,9 @@ body {
     opacity var(--transition),
     transform var(--transition);
   overflow: auto;
-  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
 
-  &:target {
+  &:target,
+  .page.menu-open & {
     opacity: 1;
     pointer-events: all;
     transform: translateX(0);
@@ -256,11 +300,14 @@ body {
 
 .header__title {
   margin: 0;
-  font-size: clamp(40px, 10vw, 80px);
+  font-size: clamp(56px, 12vw, 120px);
   font-weight: 800;
-  line-height: 1;
+  line-height: 0.95;
   letter-spacing: -0.03em;
   color: var(--color-text);
+  max-width: 880px;
+  margin-left: 6%;
+  text-transform: none;
 }
 
 /* ============================================================
@@ -326,9 +373,11 @@ body {
 }
 
 .product-card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  max-width: 80%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
   transition: transform var(--transition-slow);
 }
 
@@ -337,9 +386,13 @@ body {
 }
 
 .product-card__img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: var(--color-card-bg);
 }
 
 .product-card__info {
@@ -367,8 +420,13 @@ body {
 }
 
 .categories__intro {
+  position: relative;
   max-width: var(--content-width);
   margin: 0 auto 48px;
+}
+
+.categories__view-all {
+  margin-top: 20px;
 }
 
 .categories__subtitle {
@@ -500,7 +558,19 @@ body {
    CONTACT
    ============================================================ */
 .contact {
+  position: relative;
   padding: 80px var(--padding-x);
+  overflow: visible;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: #f2f2f2;
+  z-index: -1;
 }
 
 .contact__container {
@@ -512,10 +582,12 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
+  align-items: start;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 2fr;
     gap: 80px;
+    align-items: start;
   }
 }
 
@@ -607,11 +679,10 @@ body {
 }
 
 .footer {
+  position: relative;
+  z-index: 2;
   border-top: 1px solid rgba(27, 33, 41, 0.08);
   padding: 40px var(--padding-x);
-  position: sticky;
-  bottom: 0;
-  z-index: -1;
   background-color: #f2f2f2;
 }
 
