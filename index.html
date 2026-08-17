@@ -172,6 +172,11 @@
               </a>
               <div class="product-card__info">
                 <h3 class="product-card__name">Beosound A5</h3>
+                <p class="product-card__description">
+                  Huge sound anywhere &ndash; in the home or outdoors. Beosound
+                  A5 is a Wi-Fi and Bluetooth speaker with long-lasting battery
+                  and wireless charging built in.
+                </p>
                 <p class="product-card__price">$1299.00</p>
               </div>
             </article>
@@ -191,6 +196,11 @@
               </a>
               <div class="product-card__info">
                 <h3 class="product-card__name">Beoplay HX</h3>
+                <p class="product-card__description">
+                  Wireless noise-cancelling headphones. Listen in comfort
+                  whether you&rsquo;re on a call, working from home or taking a
+                  moment for yourself.
+                </p>
                 <p class="product-card__price">$499.00</p>
               </div>
             </article>
@@ -210,6 +220,11 @@
               </a>
               <div class="product-card__info">
                 <h3 class="product-card__name">Beosound Theatre</h3>
+                <p class="product-card__description">
+                  Four patent-pending acoustic innovations in one sleek soundbar
+                  envelop you in sound from every angle. Made to fit any TV, and
+                  last for generations.
+                </p>
                 <p class="product-card__price">$3199.00</p>
               </div>
             </article>
@@ -226,12 +241,6 @@
           <div class="categories__intro">
             <p class="categories__subtitle">Sound. Vision.</p>
             <p class="categories__description">It's your pick.</p>
-            <a
-              href="#"
-              class="button categories__view-all"
-            >
-              View all
-            </a>
           </div>
 
           <div class="categories__grid">
@@ -313,6 +322,15 @@
               </div>
             </div>
           </div>
+
+          <div class="categories__bottom">
+            <a
+              href="#"
+              class="button"
+            >
+              View all
+            </a>
+          </div>
         </div>
       </section>
       <!-- ABOUT -->
@@ -360,48 +378,19 @@
           <h2 class="section-title">Contact Us</h2>
 
           <div class="contact__wrapper">
-            <div class="contact__info animate-on-scroll">
-              <div class="contact__detail">
-                <p class="contact__label">Phone</p>
-                <a
-                  href="tel:+18004001234"
-                  class="contact__value"
-                >
-                  +1 800 400 1234
-                </a>
-              </div>
-              <div class="contact__detail">
-                <p class="contact__label">Email</p>
-                <a
-                  href="mailto:support@bose.com"
-                  class="contact__value"
-                >
-                  support@bose.com
-                </a>
-              </div>
-              <div class="contact__detail">
-                <p class="contact__label">Address</p>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=The+Mountain+Framingham+MA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="contact__value"
-                >
-                  The Mountain, Framingham, MA 01701–9168
-                </a>
-              </div>
-            </div>
-
-            <form class="contact__form animate-on-scroll">
+            <form
+              class="contact__form animate-on-scroll"
+              onsubmit="this.reset(); return false;"
+            >
               <div class="form-field">
                 <input
                   type="text"
                   id="name"
                   name="name"
                   class="form-field__input"
-                  placeholder="Your name"
+                  placeholder="Name"
                   required
-                  aria-label="Your name"
+                  aria-label="Name"
                 />
               </div>
 
@@ -411,7 +400,7 @@
                   id="email"
                   name="email"
                   class="form-field__input"
-                  placeholder="Email (e.g. john@example.com)"
+                  placeholder="Email (e.g. hello@nothing.com)"
                   required
                   aria-label="Email"
                 />
@@ -423,7 +412,7 @@
                   id="phone"
                   name="phone"
                   class="form-field__input"
-                  placeholder="Phone (e.g. +1 800 400 1234)"
+                  placeholder="Phone (e.g. +1 234 555-55-55)"
                   pattern="^\+?[0-9\s\-()]{7,}$"
                   required
                   aria-label="Phone"
@@ -435,7 +424,7 @@
                   id="message"
                   name="message"
                   class="form-field__input form-field__input--textarea"
-                  placeholder="Your message..."
+                  placeholder="Message"
                   required
                   aria-label="Message"
                 ></textarea>
@@ -445,9 +434,43 @@
                 type="submit"
                 class="button contact__submit"
               >
-                Send Message
+                Send
               </button>
             </form>
+
+            <div class="contact__info animate-on-scroll">
+              <div class="contact__detail">
+                <p class="contact__label">Phone</p>
+                <a
+                  href="tel:+12345555555"
+                  class="contact__value"
+                >
+                  +1 234 555-55-55
+                </a>
+              </div>
+              <div class="contact__detail">
+                <p class="contact__label">Email</p>
+                <a
+                  href="mailto:hello@nothing.com"
+                  class="contact__value"
+                >
+                  hello@nothing.com
+                </a>
+              </div>
+              <div class="contact__detail">
+                <p class="contact__label">Address</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=400+First+Ave+Suite+700+Minneapolis+MN+55401"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact__value"
+                >
+                  400 first ave. suite 700
+                  <br />
+                  Minneapolis, MN 55401
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -502,10 +525,6 @@
             </li>
           </ul>
         </nav>
-      </div>
-
-      <div class="footer__bottom">
-        <p class="footer__copy">© 2024 Bang & Olufsen. All rights reserved.</p>
       </div>
     </footer>
 
