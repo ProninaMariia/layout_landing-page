@@ -62,10 +62,12 @@ function closeMenu() {
     history.pushState(null, '', location.pathname + location.search);
   }
   pageEl.classList.remove('menu-open');
+
   if (menuToggle) {
     menuToggle.setAttribute('aria-expanded', 'false');
     menuToggle.setAttribute('aria-label', 'Open menu');
   }
+
   if (menu) {
     menu.removeAttribute('aria-modal');
   }
@@ -89,12 +91,6 @@ const form = document.querySelector('.contact__form');
 if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    // Use browser built-in validation
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
 
     const btn = form.querySelector('.contact__submit');
     const original = btn.textContent;
