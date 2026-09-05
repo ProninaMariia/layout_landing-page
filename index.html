@@ -239,8 +239,11 @@
       >
         <div class="categories__container">
           <div class="categories__intro">
-            <p class="categories__subtitle">Sound. Vision.</p>
-            <p class="categories__description">It's your pick.</p>
+            <p class="categories__description">
+              Sound. Vision.
+              <br />
+              It's your pick.
+            </p>
           </div>
 
           <div class="categories__grid">
@@ -339,11 +342,17 @@
         id="about"
       >
         <div class="about__media animate-on-scroll">
-          <img
-            src="images/img-10.png"
-            alt="Bose turntable"
-            class="about__img"
-          />
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="images/img-10-mobile.png"
+            />
+            <img
+              src="images/img-10.png"
+              alt="Bose turntable"
+              class="about__img"
+            />
+          </picture>
         </div>
         <div class="about__container animate-on-scroll">
           <h2 class="about__title">
@@ -431,62 +440,44 @@
                 Send
               </button>
             </form>
+
+            <div class="contact__info animate-on-scroll">
+              <div class="contact__detail">
+                <p class="contact__label">Phone</p>
+                <a
+                  href="tel:+12345555555"
+                  class="contact__value"
+                >
+                  +1 234 555-55-55
+                </a>
+              </div>
+              <div class="contact__detail">
+                <p class="contact__label">Email</p>
+                <a
+                  href="mailto:hello@nothing.com"
+                  class="contact__value"
+                >
+                  hello@nothing.com
+                </a>
+              </div>
+              <div class="contact__detail">
+                <p class="contact__label">Address</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=400+First+Ave+Suite+700+Minneapolis+MN+55401"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact__value"
+                >
+                  400 first ave. suite 700
+                  <br />
+                  Minneapolis, MN 55401
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-
-    <!-- ======================== FOOTER ======================== -->
-    <footer class="footer">
-      <div class="footer__top">
-        <a
-          href="#top"
-          class="footer__logo"
-        >
-          <img
-            src="images/logo.png"
-            alt="Bang & Olufsen"
-          />
-        </a>
-
-        <nav class="footer__nav">
-          <ul class="footer__list">
-            <li>
-              <a
-                href="#recommended"
-                class="footer__link"
-              >
-                Recommended
-              </a>
-            </li>
-            <li>
-              <a
-                href="#categories"
-                class="footer__link"
-              >
-                Categories
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                class="footer__link"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="footer__link"
-              >
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </footer>
 
     <!-- Scroll animation script -->
     <script
